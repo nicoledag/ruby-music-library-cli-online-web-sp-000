@@ -45,6 +45,8 @@ class MusicLibraryController
    idx = 1
 
    list_songs = Song.all.sort_by {|song| song.name}
+
+   binding.pry
    list_songs.each do |song|
     puts "#{idx}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     idx +=1
